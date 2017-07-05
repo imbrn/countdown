@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Countdown</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="/bower_components/material-design-lite/material.min.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="ready page active">
+        <div class="content">
+            <h1 style="font-family: 'Roboto'">Start a custom countdown</h1>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="custom-time">
+                <label class="mdl-textfield__label" for="custom-time">1 minute</label>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    onclick="startCustomCountdown();">Start</button>
+            <h2>...or select a predefined one</h2>
+            <ul>
+                <li><a onclick="startPredefinedCountdown(10);"><span>10 seconds</span></a></li>
+                <li><a onclick="startPredefinedCountdown(30);"><span>30 seconds</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60);"><span>1 minute</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60 * 10);"><span>10 minutes</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60 * 15);"><span>15 minutes</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60 * 30);"><span>30 minutes</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60 * 45);"><span>45 minutes</span></a></li>
+                <li><a onclick="startPredefinedCountdown(60 * 60);"><span>1 hour</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="started page">
+        <div class="content">
+            <div class="time-display"></div>
+            <div class="buttons">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored countdown-pause-button"
+                    onclick="pauseCountdown();">Pause</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored countdown-resume-button"
+                    onclick="resumeCountdown();">Resume</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                    onclick="stopCountdown();">Stop</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="finished page">
+        <h1>Finished!</h1>
+        <div class="buttons">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                onclick="restartCountdown();">Restart</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+                onclick="back();">Back</button>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://nwsapps.github.io/countdown">
+            <img src="images/github.svg" alt="github">
+        </a>
+    </footer>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/material-design-lite/material.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/event_manager.js"></script>
+    <script src="scripts/time.js"></script>
+    <script src="scripts/time_parsing.js"></script>
+    <script src="scripts/time_format.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/system_clock.js"></script>
+    <script src="scripts/countdown.js"></script>
+    <script src="scripts/ui/router.js"></script>
+    <script src="scripts/ui/title_display.js"></script>
+    <script src="scripts/ui/element_display.js"></script>
+    <script src="scripts/ui/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

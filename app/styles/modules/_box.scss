@@ -1,0 +1,12 @@
+%flex-box {
+    display: flex;
+}
+
+%centered-flex-box {
+    align-items: center;
+    justify-content: center;
+}
+
+%vertical-flex-box {
+    flex-direction: column;
+}

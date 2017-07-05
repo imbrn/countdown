@@ -1,0 +1,65 @@
+.page {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    visibility: hidden;
+
+    .buttons {
+        @extend %flex-box;
+        @extend %centered-flex-box;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        button {
+            min-width: 100px;
+            margin: 0 6px;
+        }
+    }
+}
+
+.page.active {
+    visibility: visible;
+}
+
+.ready.page {
+    @extend %flex-box;    
+    @extend %centered-flex-box;
+    @extend %vertical-flex-box;
+
+    .content {
+        width: 80%;
+        @extend %flex-box;
+        @extend %centered-flex-box;
+        @extend %vertical-flex-box;
+    }
+
+    h1 { font-size: 1.8em; font-weight: bold; margin-bottom: 0; text-align: center; }
+    h2 { font-size: 1.4em; margin-bottom: 0; margin-top: 50px; }
+
+    ul {
+        @extend %flex-box;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            width: 50%;
+            box-sizing: border-box;
+
+            a {
+                @extend %flex-box;
+                @extend %centered-flex-box;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.started.page, .finished.page {
+    @extend %flex-box;
+    @extend %vertical-flex-box;
+    @extend %centered-flex-box;
+}
