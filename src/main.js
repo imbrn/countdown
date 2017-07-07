@@ -6,6 +6,7 @@ import {TitleDisplay} from './title-display';
 import {ElementDisplay} from './element-display';
 import {ButtonsState} from './buttons-state';
 import {PushNotification} from './push-notification';
+import {Alarm} from './alarm';
 
 // Reference to the current countdown.
 let countdown;
@@ -32,6 +33,7 @@ function configureComposite() {
         .add(new ElementDisplay(".element-display"))
         .add(new ButtonsState())
         .add(new PushNotification())
+        .add(new Alarm())
         .done();
 }
 
