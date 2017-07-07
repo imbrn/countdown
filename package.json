@@ -9,7 +9,7 @@
     "dev:serve": "webpack-dev-server --config webpack.config.js",
     "serve": "npm run dev:serve",
     "start": "npm run build",
-    "deploy": "npm start && git subtree push --prefix dist/ origin gh-pages"
+    "deploy": "git subtree push --prefix dist/ origin gh-pages"
   },
   "keywords": [
     "countdown",
