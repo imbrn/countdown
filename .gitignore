@@ -1,7 +1,5 @@
-node_modules
-.tmp
-bower_components
-test/bower_components
+node_modules/
 
 # Editors
 .vscode
+.directory

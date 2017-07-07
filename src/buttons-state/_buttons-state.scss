@@ -1,0 +1,7 @@
+.countdown-pause-button,
+.countdown-resume-button {
+    display:inline-block;
+    &.hidden {
+        display: none;
+    }
+}
